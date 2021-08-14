@@ -1,130 +1,618 @@
 body {
-    background-color: #e4f9f5;
-    
+  font-family: "Calibri Light", sans-serif;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  background: #1b1f2a;
+  overflow-x: hidden;
+  text-align: center;
+}
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body:before {
+  content: "";
+  /* position: absolute; */
+  position: fixed;
+  background: url("/images/center-glow.png");
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+  z-index: -1;
+}
+
+p {
+  letter-spacing: 3px;
+  padding: 20px;
+}
+
+.page-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.title {
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  line-height: 55px;
+  
+  background-image: linear-gradient(to right, #29b3eb 40%, #21edba 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+}
+
+/* .header-name {
+  font-size: 35px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  line-height: 35px;
+  background-image: linear-gradient(to right, #29b3eb 40%, #21edba 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+} */
+
+.header-title {
+  /* padding-bottom: 2rem; */
+  font-size: 25px;
+  font-weight:bolder;
+  letter-spacing: 1.5px;
+  line-height: 35px;
+  background-image: linear-gradient(to right, #29b3eb 40%, #21edba 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+}
+
+.sub-header {
+  text-align: center;
+  padding-bottom: 1rem;
+  margin-bottom: 0;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  line-height: 35px;
+  background-image: linear-gradient(to right, #29b3eb 40%, #21edba 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+}
+
+.header {
+  /* padding-top: 3rem; */
+  font-size: 35px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  line-height: 35px;
+  background-image: linear-gradient(to right, #29b3eb 40%, #21edba 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+}
+
+.personal-info {
+  font-size: small;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+a:hover{
+  background: #29b3eb;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.intro {
+  text-align: left;
+  margin-bottom: 0;
+}
+
+/* .tools{
+  background: rgb(250, 150, 0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
+
+
+
+
+.test {
+  background-image: linear-gradient(to right, #29b3eb 40%, #21edba 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+}
+
+
+
+
+
+
+
+
+
+img {
+  border-radius: 10%;
+  max-width: 100%;
+  max-height: 100%;
+  -webkit-filter: grayscale(75%);
+	filter: grayscale(75%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+img:hover {
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}
+
+.hover {
+  padding-top: 0%;
+  padding-bottom: 0%;
+  margin-bottom: 0%;
+}
+
+
+
+/* Projects */
+
+.bold {
+  font-weight: bolder; 
+  background-image: linear-gradient(to right, #29b3eb 40%, #21edba 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+}
+
+.text-content {
+  text-align: left;
+}
+
+.tagline {
+  padding: 5px;
+  padding-left: 20px;
+  color: rgb(250, 150, 0);
+  font-style:oblique;
+}
+
+.additional {
+  padding-top: 0;
+}
+
+ul {
+  justify-content: right;
+  list-style-position: outside;
+  padding: 0 0 0;
+}
+
+.item-header {
+  margin-bottom: 0;
+  padding-bottom: .5rem;
+}
+
+.item {
+  padding-top: 0;
+}
+
+.edu {
+  margin-bottom: 0;
+  padding: 5px;
+  padding-left: 20px;
+}
+
+
+main {
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  padding: 25px auto 25px 0;
+}
+
+
+
+
+/* Dot strip image behind header text. Try to do it later */
+/* .header::after {
+  content: attr(data-text);
+  position:relative;
+  left: 5px;
+  top: 5px;
+  z-index: -10;
+  opacity: 0.5;
+  background: url("/images/dot_strip.png");
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .header:after {
+    display: none;
+    background: transparent;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .header {
+    font-size: 50px;
+    letter-spacing: 1.3px;
+    line-height: 50px;
+  }
+}
+@media only screen and (max-width: 559px) {
+  .header {
+    font-size: 40px;
+    letter-spacing: 1.2px;
+    line-height: 40px;
+  }
+} */
+
+.app-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1 1;
+  width: 100%;
+}
+.content .page-wrapper {
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding-right: 15px;
+  margin-right: -15px;
+}
+.app-wrapper .page-wrapper.th-full-height {
+  height: 100%;
+}
+
+#app:before {
+  content: "";
+  position: absolute;
+  position: fixed;
+  background: url("/images/red-glow-top-right.png");
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top right;
+  pointer-events: none;
+  z-index: -1;
+}
+
+#app > [data-reactroot]:before {
+  content: "";
+  position: absolute;
+  position: fixed;
+  background: url("/images/grid_transparent_tile.png");
+  left: 0;
+  right: 0;
+  background-size: 180px;
+  top: calc(63px - 180px);
+  bottom: 0;
+  background-repeat: repeat;
+  background-position: top center;
+  pointer-events: none;
+  z-index: -1;
+}
+
+#app, #app > [data-reactroot] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1 1;
 }
 
 a {
-    color: #11999E;
-    font-family: 'Montserrat', sans-serif;
-    margin: 10px 20px;
-    text-decoration: none;
-  }
+  color: inherit;
+  text-decoration: none;
+}
 
-a.navbar-brand:hover {
-    color: black;
-  }
+:focus {
+  outline: none;
+}
+
+.bottom-container {
+  padding: 50px 0 20px;
+}
+
+
+
+
+
+/*  */
+/* Horizontal rule animation */
+/*  */
+
+.wrap {
+width: 100%;
+margin: 0 auto;
+margin-bottom: 2rem;
+padding: 25px auto 25px 0;
+}
+
+hr {
+  border: none;
+  background-color: rgb(250, 150, 0);
+  height: 10px;
+}
+
+.hr1 {
+  margin-left: 0;
+}
+.hr2 {
+  margin-right: 0;
+}
+
+.trans--grow {
+  -webkit-transition: all 5s ease-in-out; /* For Safari 3.1 to 6.0 */
+  transition: all 5s  ease-in-out;
   
-a.nav-link:hover {
-    color: black;
+  width : 0;
+}
+
+.grow {
+  width: 100%;
+}
+
+.line-color-change {
+  background-color: rgb(0, 150, 250);
+}
+
+
+
+
+
+/*  */
+/* *****Button***** */
+/*  */
+
+.btn {
+  background-image: linear-gradient(to right, #29b3eb 30%, #21edba 100%);
+  background-size: 100%;
+}
+
+.btn:hover {
+  background: #29b3eb;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #29b3eb 40%, #21edba 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+
+
+/*  */
+/* *****Footer Links***** */
+/*  */
+
+.footer-link {
+  padding-right: .5rem;
+  padding-left: .5rem;
+}
+
+.bottom-container a:hover {
+  background: #29b3eb;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #29b3eb 40%, #21edba 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+
+
+/*  */
+/* *****NAVBAR***** */
+/*  */
+
+
+.th-navbar {
+  position: sticky;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 63px;
+  width: 100%;
+  background: transparent;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.th-navbar .th-navbar-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  max-width: 1200px;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  height: 63px;
+  overflow: hidden;
+}
+
+.th-navbar .middle-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1 1;
+}
+
+.th-navbar .middle-content .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  transition: all 0.3s ease-in-out;
+  margin: 0;
+}
+
+.th-navbar .middle-content .links li {
+  margin-left: 30px;
+  margin-left: 25px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.th-navbar .middle-content .links li:first-child {
+  margin-left: 0;
+}
+
+.th-navbar .middle-content .links li a {
+  font-family: "Oswald", sans-serif;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  line-height: 15px;
+  background: #ffffff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .th-navbar .middle-content .links li a {
+    background: transparent;
   }
-  
-a:hover {
-    color: black;
+}
+.th-navbar .middle-content .links li a:hover {
+  background: #29b3eb;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #29b3eb 40%, #21edba 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .th-navbar .middle-content .links li a:hover {
+    background: transparent;
   }
+}
 
-.navbar {
-    background: linear-gradient(
-      to right bottom,
-      rgba(255,255,255,0.7),
-      rgba(255,255,255,0.3)
-    )
+.th-navbar .middle-content .links li a:after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -5px;
+  z-index: -1;
+  background: url("/images/dot_strip.png");
+  width: calc(100% - 3px);
+  height: 2px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .th-navbar .middle-content .links li a:after {
+    background: transparent;
   }
-
-
-p.github {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-
-h1 {
-  color: #11999E;
-  font-weight: 600;
-  font-size: 3rem;
-  opacity: .8;
+.th-navbar .middle-content .links li a.is-active:after {
+  opacity: 1;
 }
-
-h2,
-p {
-  color: #658ec6;
-  font-weight: 600;
-  opacity: .8;
+@media only screen and (max-width: 639px) {
+  .th-navbar .middle-content .links {
+    display: none;
+  }
 }
-
-h3 {
-  color: #11999E;
-  font-weight: 600;
-  opacity: .8;
-}
-
-main {
-  min-height: 100vh;
-  background: linear-gradient(to right top, #66BFBF, #e4f9f5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.glass {
-  background: white;
-  /* min-height: 80vh;
-  width: 70%; */
-  background: linear-gradient(
-    to right bottom, 
-    rgba(255,255,255,0.5), 
-    rgba(255,255,255,0.2)
-    );
-    border-radius: 1rem;
-    display: flex;
-}
-
-.dashboard {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  text-align: center;
-  background: linear-gradient(
-    to right bottom, 
-    rgba(255,255,255,0.5), 
-    rgba(255, 255, 255, 0.432)
-    );
-  border-radius: 1rem;
-  padding: 1rem;
-  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.39);
-}
-
-/* Projects Section */
-
-.status h2 {
-  padding: 0rem 2rem;
-}
-
-.projects {
-  flex: 2;
-}
-
-.status {
-  margin-bottom: 3rem;
-}
-
-.projects {
-  margin: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
-.card {
-  /* display: flex; */
-  background: linear-gradient(
-    to left top, 
-    rgba(255,255,255,0.8),
-    rgba(255, 255, 255, 0.486)
-    );
-    border-radius: 1rem;
-    margin: 2rem 0rem;
-    padding: 2rem;
-    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.39);
+@media only screen and (max-width: 767px) {
+  .th-navbar .middle-content .links li {
+    margin-left: 20px;
+  }
+  .th-navbar .middle-content .links li a {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    line-height: 15px;
+  }
 }

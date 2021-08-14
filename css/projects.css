@@ -1,140 +1,528 @@
 body {
-    background-color: #e4f9f5;
-    
+  font-family: "Calibri Light", sans-serif;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  background: #1b1f2a;
+  overflow-x: hidden;
+  text-align: center;
 }
 
-a {
-    color: #11999E;
-    font-family: 'Montserrat', sans-serif;
-    margin: 10px 20px;
-    text-decoration: none;
-  }
 
-a.navbar-brand:hover {
-    color: black;
-  }
-  
-a.nav-link:hover {
-    color: black;
-  }
-  
-a:hover {
-    color: black;
-  }
-
-.navbar {
-    background: linear-gradient(
-      to right bottom,
-      rgba(255,255,255,0.7),
-      rgba(255,255,255,0.3)
-    )
-  }
-
-
-p.github {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-h1 {
-  color: #11999E;
-  font-weight: 600;
-  font-size: 3rem;
-  opacity: .8;
+body:before {
+  content: "";
+  /* position: absolute; */
+  position: fixed;
+  background: url("/images/center-glow.png");
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+  z-index: -1;
 }
 
-h2,
 p {
-  color: #658ec6;
-  font-weight: 600;
-  opacity: .8;
+  letter-spacing: 2px;
+  padding: 20px;
 }
 
-h3 {
-  color: #11999E;
-  font-weight: 600;
-  opacity: .8;
+.page-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
-main {
-  min-height: 100vh;
-  background: linear-gradient(to right top, #66BFBF, #e4f9f5);
+.title {
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  line-height: 35px;
+}
+
+.header-title {
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  font-size: 35px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  line-height: 35px;
+  background-image: linear-gradient(to right, #29b3eb 35%, #21edba 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+}
+
+
+/* Projects */
+
+img {
+  border-radius: 10%;
+  max-width: 100%;
+  max-height: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.glass {
-  background: white;
-  min-height: 80vh;
-  width: 75%;
-  background: linear-gradient(
-    to right bottom, 
-    rgba(255,255,255,0.5), 
-    rgba(255,255,255,0.2)
-    );
-    border-radius: 1rem;
-    display: flex;
+
+
+/*  */
+/* *****Cards***** */
+/*  */
+
+.click {
+  padding: 0;
+  font-size: smaller;
+  
 }
 
-.dashboard {
-  flex: .5;
-  /* display: flex; */
+.subheader {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  font-size: 35px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  line-height: 35px;
+  background-image: linear-gradient(to right, #29b3eb 25%, #21edba 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+}
+
+/*effect-box*/
+.subheader:after,
+.subheader:before {
+	content: '';
+  position: absolute;
+  left: 36.8%;
+  display: inline-block;
+  height: 1.5em;
+  width: 25%;
+  margin-top: -.5rem;
+  opacity: 0;
+	-webkit-transition: opacity 0.50s, -webkit-transform 0.50s;
+	transition: opacity 0.50s, transform 0.50s;
+	
+}
+
+.subheader:before {
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-color: #21edba;
+  -webkit-transform: scale(1,0);
+	transform: scale(1,0);
+}
+
+.subheader:after {
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+  border-color: #29b3eb;
+  -webkit-transform: scale(0,1);
+	transform: scale(0,1);
+}
+
+.subheader:hover:after,
+.subheader:hover:before {
+  opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+
+
+.descriptions {
+  margin-left: 25%;
+  margin-right: 25%;
+  display: flex;
   flex-direction: column;
-  align-items: top;
   justify-content: space-evenly;
   text-align: center;
-  background: linear-gradient(
-    to right bottom, 
-    rgba(255,255,255,0.5), 
-    rgba(255, 255, 255, 0.432)
-    );
-  border-radius: 1rem;
-  padding: 1rem;
-  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.39);
-}
 
-/* Projects Section */
-
-.status h2 {
-  padding: 0rem 2rem;
 }
 
 .projects {
-  flex: 2;
-}
-
-.status {
-  margin-bottom: 3rem;
-}
-
-.projects {
-  margin: 5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
 }
 
 .card {
-  /* display: flex; */
-  background: linear-gradient(
-    to left top, 
-    rgba(255, 255, 255, 0.555),
-    rgba(255, 255, 255, 0.486)
-    );
-    border-radius: 1rem;
-    margin: 2rem 0rem;
-    padding: 2rem;
-    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.39);
+  width: 50%;
+  display:contents;
+  flex-direction: row;
+  background-image: linear-gradient(to right, #29b3eb 25%, #21edba 100%);
+  background-color: transparent;
+  background-size: 100%;
+  border-radius: 1rem;
+  margin: 2rem 0rem;
+  padding: 2rem;
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.39);
 }
 
-.user {
+.header {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  font-size: 35px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  line-height: 35px;
+  background-image: linear-gradient(to right, #29b3eb 25%, #21edba 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+}
+
+/* Dot strip image behind header text. Try to do it later */
+/* .header::after {
+  content: attr(data-text);
+  position: relative;
+  left: 5px;
+  top: 5px;
+  z-index: -1;
+  opacity: 0.5;
+  background: url("/images/dot_strip.png");
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
+
+.content .page-wrapper {
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding-right: 15px;
+  margin-right: -15px;
+}
+.app-wrapper .page-wrapper.th-full-height {
+  height: 100%;
+}
+
+#app:before {
+  content: "";
+  position: absolute;
+  position: fixed;
+  background: url("/images/red-glow-top-right.png");
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top right;
+  pointer-events: none;
+  z-index: -1;
+}
+
+#app > [data-reactroot]:before {
+  content: "";
+  position: absolute;
+  position: fixed;
+  background: url("/images/grid_transparent_tile.png");
+  left: 0;
+  right: 0;
+  background-size: 180px;
+  top: calc(63px - 180px);
+  bottom: 0;
+  background-repeat: repeat;
+  background-position: top center;
+  pointer-events: none;
+  z-index: -1;
+}
+
+#app, #app > [data-reactroot] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1 1;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:focus {
+  outline: none;
+}
+
+.bottom-container {
+  padding: 50px 0 20px;
+}
+
+
+
+/*  */
+/* Horizontal rule animation */
+/*  */
+
+.wrap {
+width: 50%;
+margin: 0 auto;
+margin-bottom: 3rem;
+padding: 25px auto 25px 0;
+}
+
+hr {
+  border: none;
+  background-color: rgb(250, 150, 0);
+  height: 10px;
+}
+
+.hr1 {
+  margin-left: 0;
+}
+.hr2 {
+  margin-right: 0;
+}
+
+.trans--grow {
+  -webkit-transition: all 5s ease-in-out; /* For Safari 3.1 to 6.0 */
+  transition: all 5s  ease-in-out;
   
-  position: -webkit-sticky;
+  width : 0;
+}
+
+.grow {
+  width: 100%;
+}
+
+.line-color-change {
+  background-color: rgb(0, 150, 250);
+}
+
+
+
+
+
+/*  */
+/* *****Button***** */
+/*  */
+
+.btn {
+  background-image: linear-gradient(to right, #29b3eb 30%, #21edba 100%);
+  background-size: 100%;
+}
+
+.btn:hover {
+  background: #29b3eb;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #29b3eb 40%, #21edba 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+
+
+/*  */
+/* *****Footer Links***** */
+/*  */
+
+.footer-link {
+  padding-right: .5rem;
+  padding-left: .5rem;
+}
+
+.bottom-container a:hover {
+  background: #29b3eb;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #29b3eb 40%, #21edba 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+
+
+/*  */
+/* *****NAVBAR***** */
+/*  */
+
+
+.th-navbar {
   position: sticky;
-  top: 5rem;
-  margin-top: 5rem;
-  z-index: 5;
-  
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 63px;
+  width: 100%;
+  background: transparent;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.th-navbar .th-navbar-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  max-width: 1200px;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  height: 63px;
+  overflow: hidden;
+}
+
+.th-navbar .middle-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1 1;
+}
+
+.th-navbar .middle-content .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  transition: all 0.3s ease-in-out;
+  margin: 0;
+}
+
+.th-navbar .middle-content .links li {
+  margin-left: 30px;
+  margin-left: 25px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.th-navbar .middle-content .links li:first-child {
+  margin-left: 0;
+}
+
+.th-navbar .middle-content .links li a {
+  font-family: "Oswald", sans-serif;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  line-height: 15px;
+  background: #ffffff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .th-navbar .middle-content .links li a {
+    background: transparent;
+  }
+}
+.th-navbar .middle-content .links li a:hover {
+  background: #29b3eb;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #29b3eb 40%, #21edba 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .th-navbar .middle-content .links li a:hover {
+    background: transparent;
+  }
+}
+
+.th-navbar .middle-content .links li a:after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -5px;
+  z-index: -1;
+  background: url("/images/dot_strip.png");
+  width: calc(100% - 3px);
+  height: 2px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .th-navbar .middle-content .links li a:after {
+    background: transparent;
+  }
+}
+.th-navbar .middle-content .links li a.is-active:after {
+  opacity: 1;
+}
+@media only screen and (max-width: 639px) {
+  .th-navbar .middle-content .links {
+    display: none;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .th-navbar .middle-content .links li {
+    margin-left: 20px;
+  }
+  .th-navbar .middle-content .links li a {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    line-height: 15px;
+  }
 }

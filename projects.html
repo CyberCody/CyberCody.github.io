@@ -11,104 +11,126 @@
 
   <link rel="stylesheet" href="css/projects.css">
   <link rel="icon" href="favicon (3).ico">
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Merriweather&family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="/js/hr.js"></script>
 
 </head>
 
 <body>
-    
-    <nav class="navbar navbar-expand-lg sticky-top">
-        <div class="container-fluid">
-    
-          <a class="navbar-brand" href="index.html">Cody Tong</a>
-    
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          
-          
-          
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href="projects.html">Projects</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="resume.html">Resume</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="">About</a>
-                </li>
-              </ul>
-            </div>
-    
-        </div>
-    </nav>
+  <div id="app">
 
-    <main>
-
-      <section class="glass">
-
-        <div class="dashboard">
-
-          <div class="user">
-            <img src="images/circleprofilepicture.png.png" alt="">
-            <h3>Cody Tong</h3>
-            <p>More Projects:</p>
-            <p class="github"><a href="https://github.com/CyberCody/Challenges" target="_blank">Click Here! Github</a></p>
+    <div data-reactroot>
+      <nav class="th-navbar">
+        <div class="th-navbar-content">
+          <div class="middle-content">
+            <ul class="links">
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="projects.html">PROJECTS</a></li>
+              <li><a href="resume.html">RESUME</a></li>
+            </ul>
           </div>
-          
         </div>
 
-        <div class="projects">
+        <div class="th-flyout-nav"></div>
+      </nav>
 
-          <div class="status">
-            <h1>Core Projects</h1>
+      <div class="content">
+
+        <div class="page-wrapper">
+
+          <div class="top-container">
+
+            <div class="header-title">
+              <h1 data-text="Cody Tong" class="title">Projects</h1>
+              <h2 class="title">Full-Stack Developer</h2>
+            </div>
+
           </div>
 
-          <div class="cards">
+          <div class="wrap">
+            <hr class="trans--grow hr1">
+            <hr class="trans--grow hr2">
+          </div>
+          
 
-            <div class="card">
-              <div class="card-info">
-                <h2>SQLAlchemy</h2>
-                <p>Using a data set containing weather stats in hawaii. 
-                  I designed a query using Python of the last 12 months of data and loaded results in a Pandas Dataframe. 
-                  Then for the analysis I queried station precipitation as well as temperature in Hawaii and  plotted results using Matplotlib.
-                  Using the designed queries I created Flask API endpoints for precipitation, stations, and temperature.
-                  </p>
-              </div>
-            </div>
+          <div class="projects">
   
-            <div class="card">
-              <div class="card-info">
-                <h2>Web Scraping</h2>
-                <p>Completed initial scraping on the NASA Mars News Site using Jupyter Notebook, BeautifulSoup, Pandas, and Requests/Splinter. 
-                  Using Splinter to navigate the site and find images. 
-                  Then with Pandas I scraped the data table on the NASA site and converted data to an HTML string. 
-                  Using MongoDB with Flask templating to create a new HTML page that displays all information that was scraped from the URLs. 
-                  Then, I converted the Jupyter Notebook to a Python script with a function called “scrape” that executes all of my scraping code and returns one Python dictionary containing all of the scraped data. 
-                  Storing the returned values in Mongo. Finally, created an HTML file that takes the Mars data dictionary and displays the data in the appropriate HTML elements.</p>
-              </div>
-            </div>
+            <div class="descriptions">
   
-            <div class="card">
-              <div class="card-info">
-                <h2>Leaflet & Javascript</h2>
-                <p>Using the URL from USGS for the JSON  earthquake data, I pulled the data in to visualize. 
-                  After data was sourced I then proceeded to use leaflet to plot all of the earthquakes based on the longitude and latitude. 
-                  Using Javascript the data markers on the map reflect the magnitude of the earthquake  by their size and the depth of the earthquake by color.  
-                  Earthquakes with higher magnitudes appear larger and those with greater depth appear darker in color. Also, added popups to display more information on the selected earthquake on the map (magnitude and depth). 
-                  To add a bit more of a user customized experience I added a number of base maps to choose from as well as separated the 2 data sets (earthquakes and tectonic plates) into overlays that can be turned on and off independently.</p>
+              <div class="card">
+                <div class="card-info">
+                  <a href="https://github.com/CyberCody/Challenges/tree/master/08-Sqlalchemy-Challenge" target="_blank"><h2 align= "center" class="subheader">SQLAlchemy</h2></a>
+                  <p class="click">click header</p>
+                  <p>Using a data set containing weather stats in hawaii. 
+                    I designed a query using Python of the last 12 months of data and loaded results in a Pandas Dataframe. 
+                    Then for the analysis I queried station precipitation as well as temperature in Hawaii and  plotted results using Matplotlib.
+                    Using the designed queries I created Flask API endpoints for precipitation, stations, and temperature.
+                    </p>
+                </div>
+
+                <div class="image">
+                  <img src="images/leaflet_map.png" alt="leaflet map image">
+                </div>
               </div>
+    
+              <div class="card">
+                <div class="card-info">
+                  <a href="https://github.com/CyberCody/Challenges/tree/master/09-Web-Scraping-Challenge" target="_blank"><h2 class="subheader">Web Scraping</h2></a>
+                  <p class="click">click header</p>
+                  <p>Completed initial scraping on the NASA Mars News Site using Jupyter Notebook, BeautifulSoup, Pandas, and Requests/Splinter. 
+                    Using Splinter to navigate the site and find images. 
+                    Then with Pandas I scraped the data table on the NASA site and converted data to an HTML string. 
+                    Using MongoDB with Flask templating to create a new HTML page that displays all information that was scraped from the URLs. 
+                    Then, I converted the Jupyter Notebook to a Python script with a function called “scrape” that executes all of my scraping code and returns one Python dictionary containing all of the scraped data. 
+                    Storing the returned values in Mongo. Finally, created an HTML file that takes the Mars data dictionary and displays the data in the appropriate HTML elements.</p>
+                </div>
+
+                <div class="image">
+                  <img src="images/web_scraping_img1.jpg" alt="">
+                </div>
+                <div class="image">
+                  <img src="images/web_scraping_img2.jpg" alt="">
+                </div>
+              </div>
+    
+              <div class="card">
+                <div class="card-info">
+                  <a href="https://github.com/CyberCody/Challenges/tree/master/13-Leaflet-Challenge" target="_blank"><h2 class="subheader">Leaflet & Javascript</h2></a>
+                  <p class="click">click header</p>
+                  <p>Using the URL from USGS for the JSON  earthquake data, I pulled the data in to visualize. 
+                    After data was sourced I then proceeded to use leaflet to plot all of the earthquakes based on the longitude and latitude. 
+                    Using Javascript the data markers on the map reflect the magnitude of the earthquake  by their size and the depth of the earthquake by color.  
+                    Earthquakes with higher magnitudes appear larger and those with greater depth appear darker in color. Also, added popups to display more information on the selected earthquake on the map (magnitude and depth). 
+                    To add a bit more of a user customized experience I added a number of base maps to choose from as well as separated the 2 data sets (earthquakes and tectonic plates) into overlays that can be turned on and off independently.</p>
+                </div>
+
+              </div>
+    
+            </div>
+
+            <div class="contact-me">
+              <h2 class="header">Get in Touch</h2>
+              <br>
+              <a class="btn" href="mailto:codytong1130@gmail.com">CONTACT ME</a>
+            </div>
+
+            <div class="bottom-container">
+              <a class="footer-link" href="https://www.linkedin.com/">LinkedIn</a>
+              <a class="footer-link" href="https://github.com/CyberCody">Github</a>
+              <p class="cody">© 2020 Cody Tong.</p>
             </div>
   
           </div>
-
         </div>
 
-      </section>
+      </div>
 
-    </main>
+    </div>
+  </div>
 
-    
 </body>
+
+
+</html>
